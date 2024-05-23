@@ -1,6 +1,6 @@
 export default function ChallengeWrapper({
   children,
-  maxWidth = "320px",
+  maxWidth = "340px",
   offset = "0",
 }: {
   children: React.ReactNode;
