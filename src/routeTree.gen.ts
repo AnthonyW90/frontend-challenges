@@ -13,6 +13,7 @@
 import { Route as rootRoute } from './routes/__root'
 import { Route as AboutImport } from './routes/about'
 import { Route as IndexImport } from './routes/index'
+import { Route as TestimonialCardIndexImport } from './routes/testimonialCard/index'
 
 // Create/Update Routes
 
@@ -23,6 +24,11 @@ const AboutRoute = AboutImport.update({
 
 const IndexRoute = IndexImport.update({
   path: '/',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const TestimonialCardIndexRoute = TestimonialCardIndexImport.update({
+  path: '/testimonialCard/',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -44,11 +50,22 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutImport
       parentRoute: typeof rootRoute
     }
+    '/testimonialCard/': {
+      id: '/testimonialCard/'
+      path: '/testimonialCard'
+      fullPath: '/testimonialCard'
+      preLoaderRoute: typeof TestimonialCardIndexImport
+      parentRoute: typeof rootRoute
+    }
   }
 }
 
 // Create and export the route tree
 
-export const routeTree = rootRoute.addChildren({ IndexRoute, AboutRoute })
+export const routeTree = rootRoute.addChildren({
+  IndexRoute,
+  AboutRoute,
+  TestimonialCardIndexRoute,
+})
 
 /* prettier-ignore-end */
