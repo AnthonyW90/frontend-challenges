@@ -7,8 +7,5 @@ export default defineConfig({
   plugins: [
     react(),
     TanStackRouterVite()
-  ],
-  build: {
-    outDir: './docs'
-  }
+  ]
 })
