@@ -8,5 +8,5 @@ export default defineConfig({
     react(),
     TanStackRouterVite()
   ],
-  base: '/frontend-challenges/'
+  base: '/shako/'
 })
