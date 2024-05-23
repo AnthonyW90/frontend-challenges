@@ -5,7 +5,7 @@ import Footer from "../components/footer";
 export const Route = createRootRoute({
   component: () => (
     <>
-      <div className="p-2 flex gap-2">
+      <div className="p-2 flex gap-2" data-gfe-screenshot-exclude="true">
         <Link to="/" className="[&.active]:font-bold">
           Home
         </Link>{" "}
@@ -16,7 +16,6 @@ export const Route = createRootRoute({
           Testimonial Card
         </Link>
       </div>
-      <hr />
       <Outlet />
       {/* <TanStackRouterDevtools /> */}
       <Footer />
