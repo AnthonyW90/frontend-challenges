@@ -9,7 +9,7 @@ export default defineConfig({
   base: "/shako/",
   resolve: {
     alias: {
-      "@": path.resolve(import.meta.dir, "src"),
+      "@": path.resolve(__dirname, "src"),
     },
   },
 });
