@@ -18,19 +18,19 @@ function TestimonialCard({
   imgUrl: string;
 }) {
   return (
-    <div className="bg-white w-full border border-neutral-200 rounded-lg shadow max-w-[340px] font-normal">
-      <div className="flex flex-col p-6 gap-4">
-        <div className="flex gap-4">
-          <img className="size-12" src={imgUrl} alt="" />
-          <div>
-            <h2 className="text-lg text-neutral-900 font-semibold">
-              {fullName}
-            </h2>
-            <p className="text-xs text-neutral-600">@{username}</p>
-          </div>
+    <div className="bg-white border border-neutral-200 rounded-lg shadow max-w-[340px] font-normal p-6 flex flex-col space-y-4">
+      <div className="flex space-x-4 items-center">
+        <img className="size-12 rounded-full" src={imgUrl} alt="" />
+        <div>
+          <h2 className="text-lg text-neutral-900 font-semibold text-ellipsis whitespace-nowrap overflow-hidden">
+            {fullName}
+          </h2>
+          <p className="text-sm text-zinc-600 text-ellipsis whitespace-nowrap overflow-hidden">
+            @{username}
+          </p>
         </div>
-        <p className="text-neutral-600 text-base line-clamp-5">{comment}</p>
       </div>
+      <p className="text-neutral-600 text-base line-clamp-5">{comment}</p>
     </div>
   );
 }
