@@ -18,7 +18,7 @@ function TestimonialCard({
   imgUrl: string;
 }) {
   return (
-    <div className="bg-white w-full border border-neutral-200 rounded-lg shadow max-w-[340px]">
+    <div className="bg-white w-full border border-neutral-200 rounded-lg shadow max-w-[340px] font-normal">
       <div className="flex flex-col p-6 gap-4">
         <div className="flex gap-4">
           <img className="size-12" src={imgUrl} alt="" />
